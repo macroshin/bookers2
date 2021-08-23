@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to user_path(@user)
+    redirect_to user_path(@user), notice: 'You have update user successfully.'
   end
 
   private
